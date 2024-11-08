@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trả góp</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "../css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "../css/main.css">  
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "../html/index.html">
+                <img src = "../img/icon.jpg" alt = "">
+                <span class = "text-uppercase fw-lighter ms-2">DUY & HẰNG</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/cart.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-shopping-cart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/save.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-heart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">4</span>
+                </button>
+
+                <button type="button" class="btn position-relative" id="searchBtn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/index.html">trang chủ</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/product.html">sản phẩm</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/blogs.html">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/about.html">giới thiệu</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/contact.html">liên hệ</a>
+                    </li>
+                    <!-- START TÀI KHOẢN -->
+                    <li class="nav-item px-2 py-2 border-0 dropdown">
+                        <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            TÀI KHOẢN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="../html/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="../html/register.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- END TÀI KHOẢN -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- Modal -->
+    <div id="searchModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tìm kiếm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="searchInput">Nhập từ khóa hoặc sản phẩm bạn muốn tìm:</label>
+                            <input type="text" class="form-control" id="searchInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="searchSubmit">Tìm kiếm</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="mb-4">Mua Trả Góp</h2>
+                <p>
+                    Chúng tôi hiểu rằng việc mua một sản phẩm cơ khí có thể là một quyết định quan trọng và đòi hỏi sự đầu tư kỹ lưỡng. Để giúp bạn dễ 
+                    dàng sở hữu sản phẩm mà bạn mong muốn mà không gây áp lực cho tài chính cá nhân, chúng tôi hân hạnh cung cấp dịch vụ mua trả góp với 
+                    nhiều lợi ích và ưu đãi hấp dẫn.
+                </p>
+                <h3 class="mt-4">Lợi Ích của Mua Trả Góp</h3>
+                <p>
+                    Mua trả góp là một cách linh hoạt và tiết kiệm chi phí để sở hữu sản phẩm mà bạn mong muốn. Dưới đây là những lợi ích mà bạn có 
+                    thể nhận được khi sử dụng dịch vụ mua trả góp của chúng tôi:
+                </p>
+                <ul>
+                    <li><strong>Thanh toán linh hoạt:</strong> Bạn có thể chọn các kỳ hạn trả góp linh hoạt từ 6 đến 36 tháng, giúp phân bổ chi phí một 
+                    cách hợp lý với tài chính cá nhân.</li>
+                    <li><strong>Lãi suất cạnh tranh:</strong> Chúng tôi cung cấp lãi suất trả góp cạnh tranh, giúp bạn tiết kiệm chi phí và đảm bảo 
+                    thanh toán hàng tháng dễ dàng.</li>
+                    <li><strong>Không cần thủ tục phức tạp:</strong> Quy trình đăng ký mua trả góp đơn giản và thuận tiện, không yêu cầu nhiều thủ tục 
+                    phức tạp.</li>
+                    <li><strong>Khuyến mãi đặc biệt:</strong> Thường xuyên chúng tôi có các chương trình khuyến mãi đặc biệt cho các gói trả góp, giúp 
+                    bạn nhận được những ưu đãi hấp dẫn khi mua sản phẩm máy lạnh.</li>
+                </ul>
+                <h3 class="mt-4">Điều Kiện Mua Trả Góp</h3>
+                <p>
+                    Để đảm bảo quá trình mua trả góp diễn ra thuận lợi, chúng tôi áp dụng một số điều kiện cơ bản như sau:
+                </p>
+                <ul>
+                    <li><strong>Độ tuổi:</strong> Bạn cần đủ 18 tuổi trở lên để có thể đăng ký mua trả góp.</li>
+                    <li><strong>Thu nhập ổn định:</strong> Chúng tôi yêu cầu bạn có một nguồn thu nhập ổn định để đảm bảo khả năng thanh toán đúng hạn 
+                    hàng tháng.</li>
+                    <li><strong>Giấy tờ xác minh:</strong> Bạn sẽ cần cung cấp một số giấy tờ xác minh như giấy CMND, hộ khẩu, và các giấy tờ khác 
+                    liên quan để hoàn tất quá trình đăng ký mua trả góp.</li>
+                </ul>
+                <h3 class="mt-4">Cách Thức Đăng Ký</h3>
+                <p>
+                    Quy trình đăng ký mua trả góp của chúng tôi rất đơn giản và thuận tiện. Bạn có thể thực hiện các bước sau để đăng ký mua trả góp:
+                </p>
+                <ol>
+                    <li>Chọn sản phẩm cơ khí mà bạn mong muốn mua và chọn tùy chọn "Mua Trả Góp".</li>
+                    <li>Điền đầy đủ thông tin đăng ký và chọn kỳ hạn trả góp phù hợp.</li>
+                    <li>Cung cấp giấy tờ xác minh và thông tin về thu nhập của bạn để hoàn tất quá trình đăng ký.</li>
+                    <li>Chờ xác nhận từ chúng tôi và hoàn tất thủ tục mua trả góp.</li>
+                </ol>
+                <p>
+                    Sau khi hoàn tất quá trình đăng ký, bạn sẽ được cung cấp thông tin chi tiết về gói trả góp của mình và các bước thanh toán tiếp theo.
+                </p>
+                <h3 class="mt-4">Liên Hệ</h3>
+                <p>
+                    Đừng ngần ngại liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi nào về dịch vụ mua trả góp của chúng tôi. Đội ngũ nhân viên chuyên 
+                    nghiệp của chúng tôi luôn sẵn lòng hỗ trợ bạn và giải đáp mọi thắc mắc của bạn.
+                </p>
+                <p>
+                    Hãy liên hệ ngay hôm nay để biết thêm thông tin chi tiết và tìm ra gói trả góp phù hợp nhất với nhu cầu và khả năng tài chính của bạn.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <!-- Mở đầu footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/@playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Kết thúc footer -->    
+
+    <!-- jquery -->
+    <script src = "../js/jquery-3.6.0.js"></script>
+    <!-- fontawesome js -->
+    <script src="../js/all.min.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "../js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "../js/script.js"></script>   
+    
+</body>
+</html>

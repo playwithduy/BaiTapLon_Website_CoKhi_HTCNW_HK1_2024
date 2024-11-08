@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài Khoản Đã Đăng Ký</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/stylelogin.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            margin-top: 2rem; /* Khoảng cách cho phần nội dung */
+        }
+
+        footer {
+            margin-top: auto; /* Đưa footer xuống dưới cùng */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Thông Tin Tài Khoản</h2>
+        <input type="text" id="searchInput" class="form-control mb-4" placeholder="Tìm kiếm tài khoản..." style="width: 50%; margin: auto;">
+    
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Họ tên</th>
+                        <th>Số điện thoại</th>
+                        <th>Mật khẩu</th>
+                        <th>Lấy lại mật khẩu</th>
+                    </tr>
+                </thead>
+                <tbody id="accountTableBody">
+                    <!-- Dữ liệu tài khoản sẽ được thêm vào đây -->
+                </tbody>
+            </table>
+        </div>
+    
+        <div class="text-center mt-4">
+            <a href="../html/login.html" class="btn btn-primary me-2">Đăng Nhập</a>
+            <a href="../html/register.html" class="btn btn-secondary">Đăng Ký Thêm Tài Khoản</a>
+        </div>
+    </div>
+    
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/@playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        // Lấy thông tin từ localStorage
+        document.addEventListener("DOMContentLoaded", function() {
+            // Giả sử bạn lưu nhiều tài khoản dưới dạng JSON trong localStorage
+            const accounts = JSON.parse(localStorage.getItem("registeredAccounts")) || [];
+
+            const accountTableBody = document.getElementById("accountTableBody");
+            accounts.forEach(account => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${account.fullname}</td>
+                    <td>${account.phone}</td>
+                    <td>${account.password.replace(/./g, '*')}</td>
+                    <td><button class="btn btn-warning resetPasswordBtn">Lấy lại mật khẩu</button></td>
+                `;
+                accountTableBody.appendChild(row);
+            });
+
+            // Tìm kiếm tài khoản
+            document.getElementById("searchInput").addEventListener("keyup", function() {
+                const filter = this.value.toLowerCase();
+                const rows = accountTableBody.getElementsByTagName("tr");
+                for (let i = 0; i < rows.length; i++) {
+                    const cells = rows[i].getElementsByTagName("td");
+                    const fullname = cells[0].textContent.toLowerCase();
+                    const phone = cells[1].textContent.toLowerCase();
+                    if (fullname.includes(filter) || phone.includes(filter)) {
+                        rows[i].style.display = ""; 
+                    } else {
+                        rows[i].style.display = "none"; 
+                    }
+                }
+            });
+
+            // Sự kiện cho các nút lấy lại mật khẩu
+            const resetPasswordButtons = document.querySelectorAll(".resetPasswordBtn");
+            resetPasswordButtons.forEach(button => {
+                button.addEventListener("click", function() {
+                    window.location.href = "../html/resetPassword.html"; // Thay đổi đường dẫn đến trang lấy lại mật khẩu
+                });
+            });
+        });
+    </script>
+</body>
+</html>

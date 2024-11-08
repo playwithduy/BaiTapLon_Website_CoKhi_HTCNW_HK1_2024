@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "../css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "../css/main.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "../html/index.html">
+                <img src = "../img/icon.jpg" alt = "">
+                <span class = "text-uppercase fw-lighter ms-2">DUY & HẰNG</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/cart.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-shopping-cart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/save.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-heart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">4</span>
+                </button>
+
+                <button type="button" class="btn position-relative" id="searchBtn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/index.html">trang chủ</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/product.html">sản phẩm</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/blogs.html">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/about.html">giới thiệu</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/contact.html">liên hệ</a>
+                    </li>
+                    <!-- START TÀI KHOẢN -->
+                    <li class="nav-item px-2 py-2 border-0 dropdown">
+                        <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            TÀI KHOẢN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="../html/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="../html/register.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- END TÀI KHOẢN -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- Modal -->
+    <div id="searchModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tìm kiếm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="searchInput">Nhập từ khóa hoặc sản phẩm bạn muốn tìm:</label>
+                            <input type="text" class="form-control" id="searchInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="searchSubmit">Tìm kiếm</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <!-- Sản phẩm -->
+    <section id = "product" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center">
+                <h2 class = "position-relative d-inline-block">TẤT CẢ SẢN PHẨM</h2><br>
+                <p class="position-relative d-inline-block">"Cam kết chất lượng, giá trị tối ưu cho khách hàng."</p>
+            </div>
+
+            <div class = "row g-0">
+                <div class = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                    <button type = "button" class = "btn m-1 text-dark active-filter-btn" data-filter = "*">Tất cả</button>
+                    <button type = "button" class = "btn m-1 text-dark" data-filter = ".mayhan">MÁY HÀN</button>
+                    <button type = "button" class = "btn m-1 text-dark" data-filter = ".maykhoan">MÁY KHOAN</button>
+                    <button type = "button" class = "btn m-1 text-dark" data-filter = ".mayhutbui">MÁY HÚT BỤI</button>
+                    <button type = "button" class = "btn m-1 text-dark" data-filter = ".maycua">MÁY CƯA</button>
+                    <button type = "button" class = "btn m-1 text-dark" data-filter = ".maycatgach">MÁY CẮT GẠCH</button>
+                    <button type = "button" class = "btn m-1 text-dark" data-filter = ".maycatnhom">MÁY CẮT NHÔM</button>
+                </div>
+
+                <div class = "product-list mt-4 row gx-0 gy-3">
+                    <!-- START 1 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 mayhan">
+                        <div class = "product-img position-relative">
+                            <a href="../html/mayhan1.html"><img src = "../img/mayhan1.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-40%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/mayhan1.html">Máy hàn MIG HUGONG EXTREMIG 180W III</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;">7.690.000₫</span><br>
+                            <span class = "fw-bold">4.614.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 1 -->
+                    <!-- START 2 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 mayhan">
+                        <div class = "product-img position-relative">
+                            <a href="../html/mayhan2.html"><img src = "../img/mayhan2.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-20%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/midea2.html">Máy hàn SASUKE MIG-350</a></p>
+                            <br>
+                            <span class = "fw-bold" style="text-decoration: line-through;">19.799.000₫</span><br>
+                            <span class = "fw-bold">15.840.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 2 -->
+                    <!-- START 3-->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 mayhan">
+                        <div class = "product-img position-relative">
+                            <a href="../html/mayhan3.html"><img src = "../img/mayhan3.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-8%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/mayhan3.html">Máy hàn TIG Inverter Classic TIG/ARC-200CL</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;">4.050.000₫</span><br>
+                            <span class = "fw-bold">3.726.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 3 -->
+                    <!-- START 4 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 mayhan">
+                        <div class = "product-img position-relative">
+                            <a href="../html/mayhan4.html"><img src = "../img/mayhan4.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/mayhan4.html">Máy hàn điện tử 4.5KVA PONEY MMA-200E</a></p>
+                            <br>
+                            <span class = "fw-bold">1.190.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 4 -->
+                    <!-- START 5 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maykhoan">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maykhoan1.html"><img src = "../img/maykhoan.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-20%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maykhoan1.html">Bộ máy khoan búa 3 chức năng Stanley SHR243KA-B1</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;">2.490.000₫</span><br>
+                            <span class = "fw-bold">1.992.000₫ </span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 5 -->
+                    <!-- START 6 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maykhoan">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maykhoan2.html"><img src = "../img/maykhoan2.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-5%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maykhoan2.html">Máy khoan búa không chổi than dùng pin Lithium-Ion Total TIDLI20508</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;">2.030.000₫</span><br>
+                            <span class = "fw-bold">1.928.500₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 6 -->
+                    <!-- START 7 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maykhoan">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maykhoan3.html"><img src = "../img/maykhoan3.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maykhoan3.html">Máy khoan búa không chổi than dùng pin Lithium-Ion Total TIDLI20508</a></p>
+                            <span class = "fw-bold"></span><br>
+                            <span class = "fw-bold">1.230.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 7 -->
+                    <!-- START 8 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maykhoan">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maykhoan4.html"><img src = "../img/maykhoan4.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maykhoan4.html">Máy khoan búa TOLSEN 88551 1500W</a></p>
+                            <br><br>
+                            <span class = "fw-bold">4.416.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 8 -->
+                    <!-- START 9 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 mayhutbui">
+                        <div class = "collection-img position-relative">
+                            <a href="../html/mayhutbui1.html"><img src = "../img/mayhutbui.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/mayhutbui1.html">Máy hút bụi 75L TOTAL TVC24751</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;"></span><br><br><br>
+                            <span class = "fw-bold">6.040.000₫</span><br>
+                            <a href = "" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 9 -->
+                    <!-- START 10 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 mayhutbui">
+                        <div class = "collection-img position-relative">
+                            <a href="../html/mayhutbui2.html"><img src = "../img/mayhutbui2.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-16%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/mayhutbui2.html">Máy hút bụi 3 chức năng – Khô/Ướt/Thổi – Hiệu Stanley USA – SL19501-12B – motor 2 tầng</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;">6.180.000₫</span><br>
+                            <span class = "fw-bold">5.190.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 10 -->
+                    <!-- START 11 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 mayhutbui">
+                        <div class = "collection-img position-relative">
+                            <a href="../html/mayhutbui3.html"><img src = "../img/mayhutbui3.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-20%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/mayhutbui3.html">Máy hút bụi 3200W DCA AVC80</a></p>
+                            <br><br>
+                            <span class = "fw-bold" style="text-decoration: line-through;">6.750.000₫</span><br>
+                            <span class = "fw-bold">5.400.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 11 -->
+                    <!-- START 12 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 mayhutbui">
+                        <div class = "collection-img position-relative">
+                            <a href="../html/mayhutbui4.html"><img src = "../img/mayhutbui4.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-5%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/mayhutbui4.html">Máy hút bụi tự động dùng pinTotal TVCRR30201</a></p><br>
+                            <span class = "fw-bold" style="text-decoration: line-through;">2.600.000₫</span><br>
+                            <span class = "fw-bold">2.470.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 12 -->
+                    <!-- START 13 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycua">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycua1.html"><img src = "../img/maycua1.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">5%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycua1.html">Máy Cưa Xích Điện Kenmax KMEC003</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;">1.460.000₫</span><br>
+                            <span class = "fw-bold">1.387.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 13 -->
+                    <!-- START 14 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycua">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycua2.html"><img src = "../img/maycua2.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycua2.html">Máy cưa xích điện Huter ELS-1500P (0/10/29) 1.500W</a></p>
+                            <span class = "fw-bold">1.320.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 14 -->
+                    <!-- START 15 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycua">
+                        <div class = "collection-img position-relative">
+                            <a href="../html/maycua3.html"><img src = "../img/maycua3.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycua3.html">Máy cưa xích xăng STIHL MS260 (lam và xích 16 inch)</a></p>
+                            <span class = "fw-bold">12.990.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 15 -->
+                    <!-- START 16 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycua">
+                        <div class = "collection-img position-relative">
+                            <a href="../html/maycua4.html"><img src = "../img/maycua4.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycua4.html">Máy cưa xích chạy xăng Dewoo DW-4500R</a></p>
+                            <span class = "fw-bold">2.040.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 16 -->
+                    <!-- START 25 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycatgach">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycatgach1.html"><img src = "../img/maycatgach1.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-5%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycatgach1.html">Máy cắt gạch Dewalt DW862, cs 1270W</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;">1.520.000₫</span><br>
+                            <span class = "fw-bold">1.444.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 25 -->
+                    <!-- START 26 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycatgach">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycatgach2.html"><img src = "../img/maycatgach2.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-15%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycatgach2.html">Máy cắt gạch Makita M4100B</a></p><br>
+                            <span class = "fw-bold" style="text-decoration: line-through;">1.750.000₫</span><br>
+                            <span class = "fw-bold">1.460.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 26 -->
+                    <!-- START 27 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycatgach">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycatgach3.html"><img src = "../img/maycatgach3.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-32%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycatgach3.html">Máy cắt gạch DCK KZE05-110</a></p><br>
+                            <span class = "fw-bold" style="text-decoration: line-through;">1.400.000₫</span><br>
+                            <span class = "fw-bold">952.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 27 -->
+                    <!-- START 28 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycatgach">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycatgach4.html"><img src = "../img/maycatgach4.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-17%</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycatgach4.html">Máy cắt gạch Bosch GDC 140 - 06013A40K0 (06013A00K0)</a></p>
+                            <span class = "fw-bold" style="text-decoration: line-through;">1.700.000₫</span><br>
+                            <span class = "fw-bold">1.411.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 28 -->
+                    <!-- START 29 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycatnhom">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycatnhom1.html"><img src = "../img/maycatnhom1.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycatnhom1.html">Máy cắt nhôm đa năng Crown CT15111</a></p><br>
+                            <span class = "fw-bold">2.950.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 29 -->
+                    <!-- START 30 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycatnhom">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycatnhom2.html"><img src = "../img/maycatnhom2.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycatnhom2.html">Máy cắt nhôm cắt góc đa năng Fixman FM6011250</a></p>
+                            <span class = "fw-bold">1.620.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 30 -->
+                    <!-- START 31 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycatnhom">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycatnhom3.html"><img src = "../img/maycatnhom3.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycatnhom3.html">Máy cắt nhôm Fixman FM6011800</a></p><br>
+                            <span class = "fw-bold">3.410.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 31 -->
+                    <!-- START 32 -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 maycatnhom">
+                        <div class = "product-img position-relative">
+                            <a href="../html/maycatnhom4.html"><img src = "../img/maycatnhom4.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1"><a href="../html/maycatnhom4.html">Máy cắt nhôm Hyundai HCA255 255mm</a></p>
+                            <span class = "fw-bold">2.930.000₫</span><br>
+                            <a href = "../html/cart.html" class = "btn btn-primary mt-3">Thêm vào giỏ hàng</a>
+                        </div>
+                    </div>
+                    <!-- END 32 -->
+                </div>
+            </div>
+        </div>
+    </section>        
+    <!-- end of product -->  
+
+    <!-- Mở đầu footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/@playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Kết thúc footer -->
+    
+
+    <!-- jquery -->
+    <script src = "../js/jquery-3.6.0.js"></script>
+    <!-- fontawesome js -->
+    <script src="../js/all.min.js"></script>
+    <!-- isotope js -->
+    <script src="../js/isotope.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "../js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "../js/script2.js"></script>    
+</body>
+</html>

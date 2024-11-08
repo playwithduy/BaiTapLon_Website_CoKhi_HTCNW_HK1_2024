@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "../css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "../css/main.css">    
+</head>
+<body>
+     <!-- navbar -->
+     <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "../html/index.html">
+                <img src = "../img/icon.jpg" alt = "">
+                <span class = "text-uppercase fw-lighter ms-2">DUY & HANG</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/cart.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-shopping-cart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/save.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-heart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">4</span>
+                </button>
+
+                <button type="button" class="btn position-relative" id="searchBtn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/index.html">trang chủ</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/product.html">sản phẩm</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/blogs.html">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/about.html">giới thiệu</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/contact.html">liên hệ</a>
+                    </li>
+                    <!-- START TÀI KHOẢN -->
+                    <li class="nav-item px-2 py-2 border-0 dropdown">
+                        <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            TÀI KHOẢN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="../html/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="../html/register.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- END TÀI KHOẢN -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- Modal -->
+    <div id="searchModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tìm kiếm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="searchInput">Nhập từ khóa hoặc sản phẩm bạn muốn tìm:</label>
+                            <input type="text" class="form-control" id="searchInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="searchSubmit">Tìm kiếm</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="mt-4">Dụng cụ cơ khí là gì? Những loại dụng cụ cơ khí phổ biến nhất</h2>
+                <p class="lead">
+                  <em>Viết bởi Admin - 25/10/2024</em>
+                </p>
+                <img src="../img/blog2.jpg" class="img-fluid rounded" alt="huhu">
+                <p><br>
+                    Dụng cụ cơ khí là khái niệm dùng để chỉ các vật dụng liên quan đến việc gia công cơ khí, được sử dụng chủ yếu trong ngành công nghiệp. Ngày nay, dụng cụ cơ khí từng bước khẳng được vai trò quan trọng khi hỗ trợ và phục vụ cho rất nhiều ngành nghề khác nhau.
+                <p>
+                    Dụng cụ cơ khí thường mang kích thước nhỏ, dễ dàng cầm nắm và được sử dụng nhiều tại các công xưởng chuyên gia công sản xuất cơ khí hay xưởng bảo dưỡng vật dụng liên quan tới cơ khí. Không những thế, dụng cụ cơ khí còn được sử dụng ở các hộ gia đình với mục đích sửa chữa đơn giản. Ngoài ra, dụng cụ cơ khí được phân thành những loại cơ bản như: dụng cụ khí nén, dụng cụ cầm tay và các thiết bị điện. Mỗi thiết bị sẽ có tính năng và cách sử dụng khác nhau tùy theo mục đích của doanh nghiệp hay cá nhân. 
+                </p>
+                <h3><b>Đặc điểm của dụng cụ cơ khí</b></h3>
+                <p>
+                    Dụng cụ cơ khí đóng vai trò thiết yếu trong cuộc sống với nhiều công dụng nổi bật: mang lại độ chính xác cao, thiết kế gọn nhẹ, dễ dàng thao tác nhờ vật liệu bền, nhẹ như crom, nhựa ABS, hay gỗ cao cấp. Chúng có khả năng thi công trên đa dạng vật liệu và dễ bảo quản, giúp duy trì tuổi thọ và độ chính xác suốt quá trình sử dụng.
+                </p>
+                <h3><b>5 loại dụng cụ cơ khí phổ biến nhất </b></h3>
+                <h5>1. Thước lá</h5>
+                <p>
+                    Thước lá là dụng cụ được sử dụng để đo kích thước chiều dài. Thước lá có thiết kế đa dạng với chiều dài dao động từ 150mm đến 1000mm. Nhờ đó, dụng cụ này có khả năng đo lường và cho ra kết quả với độ chính xác cao, giúp người sử dụng dễ dàng đọc kết quả và làm việc hiệu quả, nhanh chóng.
+                </p>
+                <p>
+                    Thước lá được làm bằng chất liệu cao cấp, chịu được va chạm, có độ chống sốc cao, chống mài mòn sau thời gian sử dụng. Ngoài ra, thước lá còn có khả năng chống oxy hoá giúp sản phẩm được kéo dài tuổi thọ và làm được ở nhiều điều kiện môi trường khác nhau.
+                </p>
+                <h5>2. Thước Cặp</h5>
+                <p>
+                    Thước cặp hay còn được gọi là thước kẹp. Đây là dụng cụ được sử dụng để đo khoảng cách giữa hai mặt đối diện của một vật thể. Các đầu của thước kẹp được tùy chỉnh sao cho phù hợp với các điểm cần đo. 
+                </p>
+                <p>
+                    Thước cặp là dụng cụ có tính ứng dụng cao như: đo kích thước ngoài, kích thước trong, đo chiều sâu… Thước cặp có phạm vi đo rộng, độ chính xác tương đối cao, dễ sử dụng và giá thành rẻ.
+                </p>
+                <h5>3. Bộ thước đo góc</h5>
+                <p>
+                    Thước đo góc là dụng cụ được đông đảo khách hàng lựa chọn bởi tính ứng dụng cao. Hiện nay, mỗi công trình xây dựng đều sử dụng thước đo góc để đảm bảo tính chính xác và kết quả công trình hoàn hảo nhất.
+                </p>
+                <p>
+                    Bên cạnh đó, thước đo góc còn được sử dụng cho việc đo góc nghiêng, đo độ dốc của công trình xây dựng cũng như thiết kế nội thất hay đo đạc chính xác những khoảng cách nhỏ nhất. 
+                </p>
+                <p>
+                    Về hình dạng, thước đo góc thường có hình tròn, hình bán nguyệt hoặc vuông thường được làm từ thép cao cấp, đảm bảo chắc chắn, bền bỉ, chống ăn mòn.
+                </p>
+                <h5>4. Mỏ lết và cờ lết</h5>
+                <p>Mỏ lết là thiết bị cầm tay chuyên được sử dụng cho quá trình sửa chữa, gia công cơ khí. Mỏ lết thường được làm từ kim loại, hợp kim có độ cứng cao.
+                </p>
+                <p>
+                    Đặc biệt, mỏ lết có thể dễ dàng điều chỉnh được kích thước và độ rộng hẹp của má kẹp. Nhờ đó chỉ với một chiếc mỏ lết, bạn có thể linh hoạt vặn được nhiều loại đai ốc khác nhau.
+                </p>
+                <p>
+                    Cờ lê cũng là dụng cụ cầm tay có chức năng giữ và xoay các đai ốc, bu lông, chốt và các chi tiết có ren. Nhờ kích thước nhỏ gọn nên cờ lê được sử dụng rộng rãi trong đời sống hàng ngày.
+                </p>
+                <p>
+                    Cờ lê được làm bằng chất liệu thép mạ Crom siêu cứng với độ bền cao, không bị cong, gãy khi phải chịu lực lớn. Không chỉ vậy, với thiết kế thân dài, chắc chắn thuận tiện cho việc cầm nắm giúp hạn chế trơn trượt một cách tối đa.
+                </p>
+                <h5>5. Tua vít</h5>
+                <p>
+                    Tua vít là một trong những dụng cụ cơ khí phổ biến, thường có trong mỗi gia đình. Sản phẩm này có cấu tạo tương đối đơn giản gồm 3 phần chính: phần tay cầm, phần trục và phần đầu vít.
+                </p>
+                <p>
+                    Hiện nay, tua vít được sử dụng ở mọi ngành nghề như: sửa chữa lắp đặt điện nước, cơ khí, công nghiệp chế tạo máy… Tua vít được xem là một dụng cụ quan trọng, có số lượng bán ra khá cao và liên tục.
+                </p>
+                <p>
+                    Tua vít được người dùng đánh giá cao bởi một số công dụng dưới đây:
+                </p>
+                <ul>
+                    <li>Hỗ trợ bảo trì, bảo dưỡng đa dạng thiết bị máy móc.</li>
+                    <li>Hỗ trợ sửa chữa ổ điện, công tắc đèn và các thiết bị điện trong gia đình.</li>
+                    <li>Giúp tháo mở các ốc, vít trên xe gắn máy, xe đạp, xe ô tô</li>
+                    <li>Tháo lắp các thiết bị nội thất như tủ, bàn, ghế…</li>
+                </ul><br>
+            </div>
+          <div class="col-lg-4">
+            <a href="../html/blog1.html" class="goiy">
+                <div class="card mt-4">
+                    <h5 class="card-header">Gợi ý</h5>
+                    <div class="card-body">
+                      <!-- Chèn thông tin của Blog 1 -->
+                      <img src="../img/blog1.jpg" class="img-fluid rounded" alt="">
+                      <p class="card-text">DEKTON: Thương hiệu thiết bị cầm tay được các Thợ tin dùng!</p>
+                      <p class="card-text"><em>Tác giả: Nguyễn Văn Duy</em></p>
+                      <p class="card-text"><em>Ngày viết: 25/10/2024</em></p>
+                    </div>
+                  </div>
+            </a>
+            <a href="../html/blog2.html" class="goiy">
+                <div class="card mt-4">
+                    <h5 class="card-header">Gợi ý</h5>
+                    <div class="card-body">
+                      <!-- Chèn thông tin của Blog 3 -->
+                      <img src="../img/blog3.jpg" class="img-fluid rounded" alt="">
+                      <p class="card-text">Kinh nghiệm chọn mua máy bắt vít dùng pin Makita</p>
+                      <p class="card-text"><em>Admin</em></p>
+                      <p class="card-text"><em>Ngày viết: 25/10/2024</em></p>
+                    </div>
+                  </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Mở đầu footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/@playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Kết thúc footer -->
+    
+    <!-- jquery -->
+    <script src = "../js/jquery-3.6.0.js"></script>
+    <!-- fontawesome js -->
+    <script src="../js/all.min.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "../js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "../js/script.js"></script>
+
+</body>
+</html>

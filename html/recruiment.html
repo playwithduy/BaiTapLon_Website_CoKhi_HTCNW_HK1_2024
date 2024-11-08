@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trả góp</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "../css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "../css/main.css">  
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "../html/index.html">
+                <img src = "../img/icon.jpg" alt = "">
+                <span class = "text-uppercase fw-lighter ms-2">DUY & HANG</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/cart.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-shopping-cart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/save.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-heart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">4</span>
+                </button>
+
+                <button type="button" class="btn position-relative" id="searchBtn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/index.html">trang chủ</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/product.html">sản phẩm</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/blogs.html">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/about.html">giới thiệu</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/contact.html">liên hệ</a>
+                    </li>
+                    <!-- START TÀI KHOẢN -->
+                    <li class="nav-item px-2 py-2 border-0 dropdown">
+                        <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            TÀI KHOẢN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="../html/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="../html/register.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- END TÀI KHOẢN -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- Modal -->
+    <div id="searchModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tìm kiếm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="searchInput">Nhập từ khóa hoặc sản phẩm bạn muốn tìm:</label>
+                            <input type="text" class="form-control" id="searchInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="searchSubmit">Tìm kiếm</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h2 class="mb-4">Thông Tin Tuyển Dụng</h2>
+                <p>
+                    Chúng tôi luôn chào đón những ứng viên tài năng và nhiệt huyết gia nhập đội ngũ của chúng tôi. Tại đây, bạn sẽ có cơ hội tham gia vào 
+                    một môi trường làm việc chuyên nghiệp, năng động và thú vị, cùng với những cơ hội phát triển sự nghiệp và rèn luyện kỹ năng.
+                </p>
+                <h3 class="mt-4">Vị Trí Tuyển Dụng</h3>
+                <p>
+                    Hiện tại, chúng tôi đang tìm kiếm các ứng viên cho các vị trí sau đây:
+                </p>
+                <ul>
+                    <li><strong>Kỹ Sư Kỹ Thuật:</strong> Đảm bảo chất lượng và hiệu suất của sản phẩm, tham gia vào quá trình phát triển và kiểm tra sản 
+                    phẩm.</li>
+                    <li><strong>Nhân Viên Kinh Doanh:</strong> Xây dựng và duy trì mối quan hệ với khách hàng, tìm kiếm và phát triển thị trường mới.</li>
+                    <li><strong>Nhân Viên Hỗ Trợ Khách Hàng:</strong> Hỗ trợ khách hàng trong quá trình mua hàng và sau bán hàng, giải đáp thắc mắc và xử 
+                    lý khiếu nại.</li>
+                    <li><strong>Chuyên Viên Marketing:</strong> Phát triển và triển khai chiến lược marketing, quảng bá thương hiệu và sản phẩm của công ty.</li>
+                </ul>
+                <h3 class="mt-4">Yêu Cầu Ứng Viên</h3>
+                <p>
+                    Chúng tôi mong muốn nhận được ứng viên có các đặc điểm sau:
+                </p>
+                <ul>
+                    <li><strong>Kỹ Năng Chuyên Môn:</strong> Có kiến thức và kỹ năng chuyên môn cần thiết cho vị trí ứng tuyển.</li>
+                    <li><strong>Kỹ Năng Giao Tiếp:</strong> Giao tiếp thành thạo, kỹ năng làm việc nhóm tốt và khả năng làm việc độc lập.</li>
+                    <li><strong>Trách Nhiệm và Nhiệt Huyết:</strong> Sẵn lòng học hỏi và phát triển bản thân, có trách nhiệm và nhiệt huyết trong công việc.</li>
+                    <li><strong>Kinh Nghiệm:</strong> Kinh nghiệm làm việc liên quan sẽ là một lợi thế.</li>
+                </ul>
+                <h3 class="mt-4">Liên Hệ</h3>
+                <p>
+                    Nếu bạn muốn tham gia vào đội ngũ của chúng tôi, vui lòng gửi hồ sơ và CV của bạn qua địa chỉ email shopduyvahang@gmail.com hoặc 
+                    nộp trực tuyến qua website của chúng tôi.
+                </p>
+                <p>
+                    Chúng tôi sẽ liên hệ lại với các ứng viên phù hợp để tiến hành vòng phỏng vấn và xem xét hồ sơ của bạn.
+                </p>
+                <p>
+                    Chúng tôi rất mong chờ được làm việc cùng bạn và chia sẻ cơ hội phát triển sự nghiệp trong một môi trường làm việc tích cực và động 
+                    lực.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+        
+    
+    <!-- Mở đầu footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Kết thúc footer -->    
+
+    <!-- jquery -->
+    <script src = "../js/jquery-3.6.0.js"></script>
+    <!-- fontawesome js -->
+    <script src="../js/all.min.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "../js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "../js/script.js"></script>   
+    
+</body>
+</html>

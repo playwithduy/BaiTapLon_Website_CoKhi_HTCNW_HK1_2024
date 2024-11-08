@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "../css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "../css/main.css">    
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "../html/index.html">
+                <img src = "../img/icon.jpg" alt = "">
+                <span class = "text-uppercase fw-lighter ms-2">DUY & HANG</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/cart.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-shopping-cart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/save.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-heart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">4</span>
+                </button>
+
+                <button type="button" class="btn position-relative" id="searchBtn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/index.html">trang chủ</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/product.html">sản phẩm</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/blogs.html">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/about.html">giới thiệu</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/contact.html">liên hệ</a>
+                    </li>
+                    <!-- START TÀI KHOẢN -->
+                    <li class="nav-item px-2 py-2 border-0 dropdown">
+                        <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            TÀI KHOẢN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="../html/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="../html/register.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- END TÀI KHOẢN -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- Modal -->
+    <div id="searchModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tìm kiếm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="searchInput">Nhập từ khóa hoặc sản phẩm bạn muốn tìm:</label>
+                            <input type="text" class="form-control" id="searchInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="searchSubmit">Tìm kiếm</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="mt-4">Khả năng công nghệ gia công xọc trong gia công cơ khí</h2>
+                <p class="lead">
+                    <em>Viết bởi Admin - 25/10/2024</em>
+                </p>
+                <p>Shop Duy & Hằng xin chia sẻ đến các bạn về đặc điểm và khả năng công nghệ của phương pháp gia công xọc trong ngành cơ khí. Gia công xọc là phương pháp sử dụng dụng cụ xọc (broaching tool) để loại bỏ vật liệu, tạo ra các chi tiết có hình dạng và kích thước chính xác. Phương pháp này đặc biệt phù hợp cho việc gia công các rãnh, rãnh then, và các biên dạng phức tạp, đảm bảo độ chính xác và chất lượng bề mặt cao. Gia công xọc giúp tăng tốc độ sản xuất, nâng cao năng suất, và đạt được đồng nhất trong sản phẩm, rất lý tưởng cho các chi tiết nhỏ và yêu cầu kỹ thuật khắt khe.</p>
+                <img src="../img/blog5.jpg" class="img-fluid rounded" alt="">
+                <h5>1. Đặc điểm của gia công Xọc</h5>
+                <p>- Xọc được sử dụng rộng rãi trong sản xuất đơn chiếc, loạt nhỏ hoặc hàng loạt. Trong quá trình gia công ít phải dùng đồ gá và các dao cụ phức tạp.</p>
+                <p>- Đối với Xọc chuyển động chính là chuyển động thẳng, tịnh tiến khứ hồi gồm một hành trình có tải và một hành trình không tải. Chuyển động này có thể do dao hoặc bàn máy ngang chi tiết thực hiện. Chuyển động này thường có phương thẳng đứng</p>
+                <p>- Xọc thường có chuyển động chính do dao thực hiện theo phương thẳng đứng , còn chuyển động chạy dao do chi tiết thực hiện.</p>
+                <p>- Xọc chủ yếu dùng để gia công các rãnh then trong lỗ. Trong sửa chữa đôi khi dùng xọc để gia công rãnh then hoa trong lỗ hoặc xọc răng theo nguyên lý định hình.</p>
+                <p>- Năng suất xọc thấp do:</p>
+                <ul>
+                    <li>Có hành trình chạy không.</li>
+                    <li>Đầu dao có chuyển động tịnh tiến khứ hồi do đó không thể làm việc với vận tốc cắt lớn. </li>
+                    <li>Khi xọc thì không có khả năng gia công bằng nhiều dao cùng một lúc.</li>
+                </ul>
+                <h5>2. Các biện pháp nâng cao năng xuất khi Xọc</h5>
+                <p>- <b>Phương pháp gá đặt :</b> Trong sản xuất đơn chiếc phôi được gá đặt dựa theo dấu, rà gá và cắt thử nên năng suất thấp.Trong sản xuất hàng loạt người ta sử dụng đồ gá cũng như cữ so dao để gá đặt chi tiết và dụng cụ cắt nhằm tăng năng suất.</p>
+                <p>- <b>Lựa chọn máy :</b>Dùng máy có thể gá được nhiều dao cùng lúc, xọng đồng thời</p>
+                <h5>3. Biện pháp để nâng cao độ chính xác khi Xọc.</h5>
+                <p>- Thông thường với Phương pháp gia công bằng Xọc thì để tăng độ chính xác thì cần thiết nên phải tách nguyên công và phân bố lượng dư hợp lý cho gia công thô và gia công tinh.</p>
+                <p>- Sử dụng dao Xọc chất lượng và ít bị mài mòn và rung động</p>
+                <br>
+                <p><b><i>Như vậy trong bài viết này, mình vừa giới thiệu vềđặc điểm phương pháp gia công Xọc và khả năng công nghệ của gia công xọc trong cơ khí. Rất mong kiến thức này hữu ích cho các bạn trong gia công cơ khí</i></b></p>
+            </div>                                  
+          <div class="col-lg-4">
+            <a href="../html/blog1.html" class="goiy">
+                <div class="card mt-4">
+                    <h5 class="card-header">Gợi ý</h5>
+                    <div class="card-body">
+                      <!-- Chèn thông tin của Blog 1 -->
+                      <img src="../img/blog1.jpg" class="img-fluid rounded" alt="">
+                      <p class="card-text">DEKTON: Thương hiệu thiết bị cầm tay được các Thợ tin dùng!</p>
+                      <p class="card-text"><em>Tác giả: Nguyễn Văn Duy</em></p>
+                      <p class="card-text"><em>Ngày viết: 25/10/2024</em></p>
+                    </div>
+                  </div>
+            </a>
+            <a href="../html/blog2.html" class="goiy">
+                <div class="card mt-4">
+                    <h5 class="card-header">Gợi ý</h5>
+                    <div class="card-body">
+                      <!-- Chèn thông tin của Blog 2 -->
+                      <img src="../img/blog2.jpg" class="img-fluid rounded" alt="">
+                      <p class="card-text">Dụng cụ cơ khí là gì? Những loại dụng cụ cơ khí phổ biến nhất</p>
+                      <p class="card-text"><em>Tác giả: Admin</em></p>
+                      <p class="card-text"><em>Ngày viết: 25/10/2024</em></p>
+                    </div>
+                  </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Mở đầu footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/@playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Kết thúc footer -->
+    
+    <!-- jquery -->
+    <script src = "../js/jquery-3.6.0.js"></script>
+    <!-- fontawesome js -->
+    <script src="../js/all.min.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "../js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "../js/script.js"></script>
+
+</body>
+</html>

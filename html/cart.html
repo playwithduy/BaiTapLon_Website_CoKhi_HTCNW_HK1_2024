@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCL 1</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "../css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "../css/main.css">
+    <style>
+        @media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+      <div class = "container">
+          <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "../html/index.html">
+              <img src = "../img/icon.jpg" alt = "">
+              <span class = "text-uppercase fw-lighter ms-2">DUY & HANG</span>
+          </a>
+
+          <div class = "order-lg-2 nav-btns">
+              <button type = "button" class = "btn position-relative">
+                  <a href="../html/cart.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-shopping-cart"></i></a>
+                  <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+              </button>
+              <button type = "button" class = "btn position-relative">
+                  <a href="../html/save.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-heart"></i></a>
+                  <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">4</span>
+              </button>
+
+              <button type="button" class="btn position-relative" id="searchBtn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                  <i class="fa fa-search"></i>
+              </button>
+          </div>
+
+          <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+              <span class = "navbar-toggler-icon"></span>
+          </button>
+
+          <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+              <ul class = "navbar-nav mx-auto text-center">
+                  <li class = "nav-item px-2 py-2">
+                      <a class = "nav-link text-uppercase text-dark" href = "../html/index.html">trang chủ</a>
+                  </li>
+                  <li class = "nav-item px-2 py-2">
+                      <a class = "nav-link text-uppercase text-dark" href = "../html/product.html">sản phẩm</a>
+                  </li>
+                  <li class = "nav-item px-2 py-2">
+                      <a class = "nav-link text-uppercase text-dark" href = "../html/blogs.html">blogs</a>
+                  </li>
+                  <li class = "nav-item px-2 py-2">
+                      <a class = "nav-link text-uppercase text-dark" href = "../html/about.html">giới thiệu</a>
+                  </li>
+                  <li class = "nav-item px-2 py-2">
+                      <a class = "nav-link text-uppercase text-dark" href = "../html/contact.html">liên hệ</a>
+                  </li>
+                  <!-- START TÀI KHOẢN -->
+                  <li class="nav-item px-2 py-2 border-0 dropdown">
+                      <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          TÀI KHOẢN
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                          <li><a class="dropdown-item" href="../html/login.html">Đăng nhập</a></li>
+                          <li><a class="dropdown-item" href="../html/register.html">Đăng ký</a></li>
+                      </ul>
+                  </li>
+                  <!-- END TÀI KHOẢN -->
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <!-- end of navbar -->
+
+  <!-- Modal -->
+  <div id="searchModal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Tìm kiếm</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form id="searchForm">
+                      <div class="form-group">
+                          <label for="searchInput">Nhập từ khóa hoặc sản phẩm bạn muốn tìm:</label>
+                          <input type="text" class="form-control" id="searchInput">
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="searchSubmit">Tìm kiếm</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+              </div>
+          </div>
+      </div>
+  </div>
+    <br><br><br><br><br>
+
+    <section class="h-100 h-custom">
+      <div class = "title text-center py-5">
+        <h2 class = "position-relative d-inline-block">GIỎ HÀNG</h2><br>
+        <p class="position-relative d-inline-block">"Giỏ hàng của bạn, niềm vui mua sắm của bạn! Chúng tôi luôn cố gắng để đảm bảo rằng quý khách hàng có được trải nghiệm mua sắm tốt nhất"</p>
+      </div>
+        <div class="container h-100 py-5">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+      
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="h5">Giỏ hàng</th>
+                      <th scope="col">Loại máy cơ khí</th>
+                      <th scope="col">Số lượng</th>
+                      <th scope="col">Giá tiền</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <img src="../img/mayhan1.jpg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Midea">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Máy hàn MIG HUGONG EXTREMIG 180W III</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500;">Máy Hàn</p>
+                      </td>
+                      <td class="align-middle">
+                        <div class="d-flex flex-row">
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                          </button>
+      
+                          <input id="form1" min="0" name="quantity" value="2" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500;">4.614.000₫</p>
+                      </td>
+                    </tr>
+                    <!-- Cái thứ 2 -->
+                    <tr>
+                      <th scope="row" class="border-bottom-0">
+                        <div class="d-flex align-items-center">
+                          <img src="../img/mayhutbui.jpg" class="img-fluid rounded-3"
+                            style="width: 120px;" alt="Book">
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Máy hút bụi 75L TOTAL TVC24751</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle border-bottom-0">
+                        <p class="mb-0" style="font-weight: 500;">Máy hút bụi</p>
+                      </td>
+                      <td class="align-middle border-bottom-0">
+                        <div class="d-flex flex-row">
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                          </button>
+      
+                          <input id="form1" min="0" name="quantity" value="1" type="number"
+                            class="form-control form-control-sm" style="width: 50px;" />
+      
+                          <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle border-bottom-0">
+                        <p class="mb-0" style="font-weight: 500;">6.040.000₫</p>
+                      </td>
+                    </tr>
+                    <!-- Cái thứ 2 -->
+                    <tr>
+                        <th scope="row" class="border-bottom-0">
+                          <div class="d-flex align-items-center">
+                            <img src="../img/maykhoan.jpg" class="img-fluid rounded-3"
+                              style="width: 120px;" alt="Book">
+                            <div class="flex-column ms-4">
+                              <p class="mb-2">Bộ máy khoan búa 3 chức năng Stanley SHR243KA-B1</p>
+                            </div>
+                          </div>
+                        </th>
+                        <td class="align-middle border-bottom-0">
+                          <p class="mb-0" style="font-weight: 500;">Máy Khoan</p>
+                        </td>
+                        <td class="align-middle border-bottom-0">
+                          <div class="d-flex flex-row">
+                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                              <i class="fas fa-minus"></i>
+                            </button>
+        
+                            <input id="form1" min="0" name="quantity" value="1" type="number"
+                              class="form-control form-control-sm" style="width: 50px;" />
+        
+                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                        </td>
+                        <td class="align-middle border-bottom-0">
+                          <p class="mb-0" style="font-weight: 500;">1.992.000₫</p>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+      
+              <div class="card shadow-2-strong mb-5 mb-lg-0" style="border-radius: 16px;">
+                <div class="card-body p-4">
+      
+                  <div class="row">
+                    <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                      <form>
+                        <div class="d-flex flex-row pb-3">
+                          <div class="d-flex align-items-center pe-2">
+                            <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1v"
+                              value="" aria-label="..." checked />
+                          </div>
+                          <div class="rounded border w-100 p-3">
+                            <p class="d-flex align-items-center mb-0">
+                              <i class="fab fa-cc-mastercard fa-2x text-dark pe-2"></i>Credit
+                              Card
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row pb-3">
+                          <div class="d-flex align-items-center pe-2">
+                            <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel2v"
+                              value="" aria-label="..." />
+                          </div>
+                          <div class="rounded border w-100 p-3">
+                            <p class="d-flex align-items-center mb-0">
+                              <i class="fab fa-cc-visa fa-2x fa-lg text-dark pe-2"></i>Debit Card
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                          <div class="d-flex align-items-center pe-2">
+                            <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel3v"
+                              value="" aria-label="..." />
+                          </div>
+                          <div class="rounded border w-100 p-3">
+                            <p class="d-flex align-items-center mb-0">
+                              <i class="fab fa-cc-paypal fa-2x fa-lg text-dark pe-2"></i>PayPal
+                            </p>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-6">
+                      <div class="row">
+                        <div class="col-12 col-xl-6">
+                          <div data-mdb-input-init class="form-outline mb-4 mb-xl-5">
+                            <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                              placeholder="Nhập tên thẻ" />
+                            <label class="form-label" for="typeName">Tên thẻ</label>
+                          </div>
+      
+                          <div data-mdb-input-init class="form-outline mb-4 mb-xl-5">
+                            <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="MM/YY"
+                              size="7" id="exp" minlength="7" maxlength="7" />
+                            <label class="form-label" for="typeExp">Hết hạn</label>
+                          </div>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                          <div data-mdb-input-init class="form-outline mb-4 mb-xl-5">
+                            <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                              placeholder="1111 2222 3333 4444" minlength="19" maxlength="19" />
+                            <label class="form-label" for="typeText">Số thẻ</label>
+                          </div>
+      
+                          <div data-mdb-input-init class="form-outline mb-4 mb-xl-5">
+                            <input type="password" id="typeText" class="form-control form-control-lg"
+                              placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                            <label class="form-label" for="typeText">Cvv</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-3">
+                      <div class="d-flex justify-content-between" style="font-weight: 500;">
+                        <p class="mb-2">Tổng tiền</p>
+                        <p class="mb-2">12.646.000₫</p>
+                      </div>
+      
+                      <div class="d-flex justify-content-between" style="font-weight: 500;">
+                        <p class="mb-0">Giảm giá</p>
+                        <p class="mb-0">0₫</p>
+                      </div>
+      
+                      <hr class="my-4">
+      
+                      <div class="d-flex justify-content-between mb-4" style="font-weight: 500;">
+                        <p class="mb-2">Tiền cần trả</p>
+                        <p class="mb-2">12.646.000₫</p>
+                      </div>
+      
+                      <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block btn-lg">
+                        <div class="d-flex justify-content-between">
+                          <span>Thanh toán</span>
+                        </div>
+                      </button>
+      
+                    </div>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- Mở đầu footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Kết thúc footer -->    
+
+    <!-- jquery -->
+    <script src = "../js/jquery-3.6.0.js"></script>
+    <!-- fontawesome js -->
+    <script src="../js/all.min.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "../js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "../js/script.js"></script>
+    <script src="../js/product.js"></script>
+</body>
+</html>

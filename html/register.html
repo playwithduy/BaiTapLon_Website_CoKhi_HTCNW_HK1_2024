@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "../css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "../css/main.css">
+    <link rel="stylesheet" href="../css/stylelogin.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "../html/index.html">
+                <img src = "../img/icon.jpg" alt = "">
+                <span class = "text-uppercase fw-lighter ms-2">DUY & HẰNG</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/cart.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-shopping-cart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/save.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-heart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">4</span>
+                </button>
+
+                <button type="button" class="btn position-relative" id="searchBtn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/index.html">trang chủ</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/product.html">sản phẩm</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/blogs.html">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/about.html">giới thiệu</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/contact.html">liên hệ</a>
+                    </li>
+                    <!-- START TÀI KHOẢN -->
+                    <li class="nav-item px-2 py-2 border-0 dropdown">
+                        <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            TÀI KHOẢN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="../html/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="../html/register.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- END TÀI KHOẢN -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- Modal -->
+    <div id="searchModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tìm kiếm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="searchInput">Nhập từ khóa hoặc sản phẩm bạn muốn tìm:</label>
+                            <input type="text" class="form-control" id="searchInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="searchSubmit">Tìm kiếm</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br><br>
+<div class="py-5">
+    <!-- Main Container -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <!-- Register Container -->
+        <div class="row border rounded-5 p-2 bg-white shadow box-area">
+            <!-- Left Box -->
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe;">
+                <div class="featured-image mb-3">
+                    <img src="../img/1.png" class="img-fluid" style="width: 250px;">
+                </div>
+                <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Xác Thực Tài Khoản</p>
+                <small class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">"Khám phá thế giới mua sắm của chúng tôi!"</small>
+            </div>
+            <!-- Right Box -->
+            <div class="col-md-6 right-box">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <h2>Đăng ký tài khoản</h2>
+                        <p>"Chào mừng quý khách gia nhập cùng chúng tôi! Hãy khám phá những trải nghiệm mua sắm tuyệt vời đang chờ đón bạn!"</p>
+                    </div>
+                    <form id="registerForm">
+                        <div class="input-group mb-3">
+                            <input id="fullname" type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Nhập họ tên" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input id="phone" type="tel" class="form-control form-control-lg bg-light fs-6" placeholder="Nhập số điện thoại" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input id="password" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Nhập mật khẩu" required>
+                        </div>
+                        <div class="input-group mb-1">
+                            <input id="confirmPassword" type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Nhập lại mật khẩu" required>
+                        </div>
+                        <div class="input-group mb-3 d-flex justify-content-between align-items-center">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                                <label for="termsCheck" class="form-check-label text-secondary"><small>Tôi đồng ý với các điều khoản và điều kiện</small></label>
+                            </div>
+                            <div class="forgot">
+                                <small><a href="#">Xem thêm về điều khoản và điều kiện</a></small>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button type="button" class="btn btn-lg btn-primary w-100 fs-6" id="submitRegister">Đăng ký</button>
+                        </div>
+                    </form>
+                    <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-light w-100 fs-6"><img src="../img/google.png" style="width:20px" class="me-2"><small>Đăng ký với Google</small></button>
+                    </div>
+                    <div class="row">
+                        <small><a href="../html/RegisteredAccount.html">Bạn đã có tài khoản?</a><br><a href="../html/login.html">Đăng nhập</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal hiển thị thông tin đăng ký -->
+<div id="infoModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Thông tin đăng ký</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Họ tên:</strong> <span id="modalFullname"></span></p>
+                <p><strong>Số điện thoại:</strong> <span id="modalPhone"></span></p>
+                <p><strong>Mật khẩu:</strong> <span id="modalPassword"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" id="confirmInfo">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Mở đầu footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/@playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Kết thúc footer -->
+
+     <!-- jquery -->
+     <script src="../js/jquery-3.6.0.js"></script>
+     <!-- fontawesome js -->
+     <script src="../js/all.min.js"></script>
+     <!-- isotope js -->
+     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+     <!-- bootstrap js -->
+     <script src="../js/bootstrap.min.js"></script>
+     <script>
+        $(document).ready(function() {
+            $("#submitRegister").click(function() {
+                // Lấy giá trị từ các trường nhập
+                var fullname = $("#fullname").val().trim();
+                var phone = $("#phone").val().trim();
+                var password = $("#password").val();
+                var confirmPassword = $("#confirmPassword").val();
+                var termsAccepted = $("#termsCheck").is(":checked");
+        
+                // Kiểm tra thông tin và hiển thị thông báo nếu có lỗi
+                if (fullname.length < 8 || fullname.length > 20) {
+                    alert("Tên phải có độ dài từ 8 đến 20 ký tự.");
+                    return;
+                }
+                if (!/^\d{10,11}$/.test(phone)) {
+                    alert("Số điện thoại phải có 10-11 chữ số.");
+                    return;
+                }
+                if (password.length < 6) {
+                    alert("Mật khẩu phải có ít nhất 6 ký tự.");
+                    return;
+                }
+                if (password !== confirmPassword) {
+                    alert("Mật khẩu không khớp.");
+                    return;
+                }
+                if (!termsAccepted) {
+                    alert("Bạn phải đồng ý với các điều khoản và điều kiện.");
+                    return;
+                }
+        
+                // Lưu thông tin tài khoản vào localStorage
+                const accounts = JSON.parse(localStorage.getItem("registeredAccounts")) || [];
+                accounts.push({
+                    fullname: fullname,
+                    phone: phone,
+                    password: password
+                });
+                localStorage.setItem("registeredAccounts", JSON.stringify(accounts));
+        
+                // Hiển thị thông tin đăng ký thành công
+                $("#modalFullname").text(fullname);
+                $("#modalPhone").text(phone);
+                $("#modalPassword").text(password);
+                $("#infoModal").modal("show");
+        
+                // Xóa các trường nhập sau khi đăng ký thành công
+                $("#registerForm")[0].reset();
+            });
+        
+            // Xác nhận thông tin và chuyển đến trang tài khoản đã đăng ký
+            $("#confirmInfo").click(function() {
+                window.location.href = "../html/RegisteredAccount.html"; // Chuyển hướng đến trang đã đăng ký
+            });
+        });
+        </script>
+</body>
+</html>

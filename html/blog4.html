@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "../css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "../css/main.css">    
+</head>
+<body>
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "../html/index.html">
+                <img src = "../img/icon.jpg" alt = "">
+                <span class = "text-uppercase fw-lighter ms-2">DUY & HANG</span>
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/cart.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-shopping-cart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <a href="../html/save.html" style="color: inherit; text-decoration: none;"><i class = "fa fa-heart"></i></a>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">4</span>
+                </button>
+
+                <button type="button" class="btn position-relative" id="searchBtn" data-bs-toggle="modal" data-bs-target="#searchModal">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/index.html">trang chủ</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/product.html">sản phẩm</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/blogs.html">blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/about.html">giới thiệu</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "../html/contact.html">liên hệ</a>
+                    </li>
+                    <!-- START TÀI KHOẢN -->
+                    <li class="nav-item px-2 py-2 border-0 dropdown">
+                        <a class="nav-link text-uppercase text-dark dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            TÀI KHOẢN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <li><a class="dropdown-item" href="../html/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="../html/register.html">Đăng ký</a></li>
+                        </ul>
+                    </li>
+                    <!-- END TÀI KHOẢN -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- Modal -->
+    <div id="searchModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tìm kiếm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="searchForm">
+                        <div class="form-group">
+                            <label for="searchInput">Nhập từ khóa hoặc sản phẩm bạn muốn tìm:</label>
+                            <input type="text" class="form-control" id="searchInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="searchSubmit">Tìm kiếm</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="mt-4">Nên dùng máy cưa xích xăng hay máy cưa xích điện</h2>
+                <p class="lead">
+                    <em>Admin - 25/10/2024</em>
+                </p>
+                <img src="../img/blog4.jpg" class="img-fluid rounded" alt="xoc">
+                <p><br>
+                    Bạn đang băn khoăn không biết nên sử dụng loại máy cưa xích tốt chạy bằng gì để cắt tỉa cành cây dễ dàng hơn thì hãy theo dõi bài viết sau đây.
+                <h4>Nên dùng máy cưa xích xăng hay máy cưa xích điện</h4>
+                <p>Chức năng của máy cưa chủ yếu là dùng để cắt tỉa phần thân cây, cành lá một cách dễ dàng hơn. Tuy nhiên bạn đang lo lắng không biết nên dùng loại máy cưa xích tốt chạy bằng xăng hay điện sẽ mang lại hiệu quả hơn.</p>
+                <h4>1. Máy cưa xích chạy bằng xăng có ưu điểm gì?</h4>
+                <p>Có thể nói, máy cưa xích chạy bằng xăng là sản phẩm được nhiều săn đón nhất hiện nay. Khoảng cách của máy cưa với cành cây sẽ không bị giới hạn khi làm việc. Bên cạnh đó, khả năng giật nổ của sản phẩm này rất nhanh với công suất cao. Từ đó đảm bảo việc cắt tỉa sẽ trở nên dễ dàng hơn nhiều.</p>
+                <p>Một điểm cộng của loại thiết bị cầm tay tự động chạy bằng xăng này là có thể đốn được những thân cây có đường kính lớn. Bên cạnh đó là thiết kế lưỡi cưa thuộc loại cao cấp, được gia công theo quy trình đặc biệt. Từ đó đảm bảo rằng bạn sẽ làm việc được trong thời gian dài với cường độ cao.</p>
+                <p>Độ rắn chắc và bền bỉ của sản phẩm chắc chắn sẽ làm hài lòng những người tiêu dùng khó tính nhất. Có thể nói đây là loại máy hỗ trợ đắc lực nhất cho công việc đốn cây và tỉa cành chuyên nghiệp của bạn.</p>
+                <p>Ngoài ra, máy cưa xích chạy bằng chất liệu xăng có rất nhiều ưu điểm khác mà bạn nên tham khảo:</p>
+                <ul>
+                    <li>Có thể dùng trong nông trại gia đình hoặc chuyên nghiệp đều được.</li>
+                    <li>Thiết bị có thể hoạt động hiệu quả trong mọi thời tiết dù cho khắc nghiệt đến đâu.</li>
+                    <li>Máy có thiết kế đơn giản, bảo hành, bảo dưỡng và thay thế linh kiện rất dễ dàng.</li>
+                    <li>Tiết kiệm nhiên liệu xăng tối đa tuy nhiên máy vẫn hoạt động vô cùng mạnh mẽ.</li>
+                    <li>Trọng lượng máy cưa xích xăng khá nhỏ giúp người sử dụng có thể di chuyển thuận tiện hơn.</li>
+                    <li>Máy có thiết kế lò xo giúp giảm độ rung lắc khi hoạt động, với khả năng chịu lực cao. Từ đó, người sử dụng sẽ không quá khó khăn khi vận hành máy.</li>
+                </ul>
+                <h4>2. Máy cưa xích điện có điều gì nổi bật</h4>
+                <p>Ngoài máy cưa xích chạy bằng xăng, bạn cũng có thể xem xét loại chạy bằng điện. Thiết bị có rất nhiều điểm nổi trội mà bạn không thể bỏ qua sau đây:</p>
+                <ul>
+                    <li>Động cơ của máy rất khỏe, tốc độ nhanh và mạnh mẽ lên tới 405m/phút. Cùng với đó là thiết bị này sở hữu vòng tua siêu tốc độ. Điều này giúp người sử dụng làm việc với hiệu suất cao, giảm thời gian thực hiện công việc cưa.</li>
+                    <li>Bên cạnh đó là mật độ mắt xích dày cho phép bạn cưa gỗ gọn hơn và có đường cắt đẹp.</li>
+                    <li>Có khả năng cưa những thân cây hoặc thanh gỗ có kích thước lớn.</li>
+                    <li>Thiết kế nhỏ gọn, dễ cầm và di chuyển khi thi công.</li>
+                </ul>
+                <h4>3. Địa chỉ nào bán máy cưa xích tốt nhất?</h4>
+                <p>Trên thị trường có nhiều địa chỉ bán hàng trực tuyến chuyên bán sản phẩm máy cưa xích. Bigshop.vn rất tự hào là một kênh bán hàng uy tín và chất lượng hàng đầu tại Việt Nam.</p>
+                <p>Đến với chúng tôi bạn có thể tha hồ lựa chọn những thiết bị cầm tay tốt nhất với giá cả vô cùng ưu đãi. Cùng với đó là chế độ bảo hành trọn gói, chính hãng của các nhà sản xuất nổi tiếng.</p>
+                <p>Đặc biệt hơn nữa là chúng tôi có một đội ngũ nhân viên rất giàu kinh nghiệm. Nếu liên hệ đến https://www.Bigshop.vn chắc chắn bạn sẽ được tư vấn tận tình để chọn sản phẩm máy cưa xích phù hợp nhất.</p><br>
+            </div>                       
+          <div class="col-lg-4">
+            <a href="../html/blog1.html" class="goiy">
+                <div class="card mt-4">
+                    <h5 class="card-header">Gợi ý</h5>
+                    <div class="card-body">
+                      <!-- Chèn thông tin của Blog 1 -->
+                      <img src="../img/blog1.jpg" class="img-fluid rounded" alt="">
+                      <p class="card-text">DEKTON: Thương hiệu thiết bị cầm tay được các Thợ tin dùng!</p>
+                      <p class="card-text"><em>Tác giả: Nguyễn Văn Duy</em></p>
+                      <p class="card-text"><em>Ngày viết: 25/10/2024</em></p>
+                    </div>
+                  </div>
+            </a>
+            <a href="../html/blog2.html" class="goiy">
+                <div class="card mt-4">
+                    <h5 class="card-header">Gợi ý</h5>
+                    <div class="card-body">
+                      <!-- Chèn thông tin của Blog 2 -->
+                      <img src="../img/blog2.jpg" class="img-fluid rounded" alt="">
+                      <p class="card-text">Dụng cụ cơ khí là gì? Những loại dụng cụ cơ khí phổ biến nhất</p>
+                      <p class="card-text"><em>Tác giả: Admin</em></p>
+                      <p class="card-text"><em>Ngày viết: 25/10/2024</em></p>
+                    </div>
+                  </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    <!-- Mở đầu footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "../html/index.html">DUY & HẰNG</a>
+                    <p class = "text-white text-muted mt-3">"Cùng chúng tôi, khám phá thế giới mua sắm không giới hạn! Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng nhất, dịch vụ tốt nhất và trải nghiệm mua sắm tuyệt vời nhất."</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Thông tin khác</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "../html/warranty.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách bảo hành
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/recruiment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Thông tin tuyển dụng
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/installmentpayment.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách mua trả góp
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "../html/exchangeandreturn.html" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Chính sách đổi trả
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Liên hệ chúng tôi</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh 
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            playwithduy@gmail.com
+                            <br>
+                            hang1357908@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            0398278164
+                            <br>
+                            0971402609
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "https://www.facebook.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://github.com/playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.instagram.com/playwithduy/" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.youtube.com/@playwithduy" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Kết thúc footer -->
+    
+    <!-- jquery -->
+    <script src = "../js/jquery-3.6.0.js"></script>
+    <!-- fontawesome js -->
+    <script src="../js/all.min.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "../js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "../js/script.js"></script>
+
+</body>
+</html>
